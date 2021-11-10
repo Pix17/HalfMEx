@@ -1,4 +1,5 @@
 <main class="d-flex">
   <app-shop [items]="heroes" (showItem)="showDetail($event)"></app-shop>
-  <app-mirror [hero]="product"></app-mirror>
+  <app-mirror [hero]="product" (close)="closeItem($event)" (add)="addItem($event)"></app-mirror>
+  <div class="bg-primary">Carrello {{cart}}</div>
 </main>

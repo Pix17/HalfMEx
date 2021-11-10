@@ -22,6 +22,11 @@
           <p class="card-title">{{ hero.description }}</p>
           <h2 class="card-text">${{ hero.price }}</h2>
         </div>
+        <div class="d-flex justify-content-between p-3">
+            <button type="button" class="btn btn-primary" (click)="add.emit(hero)" >aggiungi al carrello</button>
+            <button type="button" class="btn btn-danger" (click)="close.emit(hero)" >chiudi</button>
+
+        </div>
     </div>
 
 </section>

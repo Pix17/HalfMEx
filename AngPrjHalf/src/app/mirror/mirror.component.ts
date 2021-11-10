@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IHero } from '../mod/interfaces';
 
 @Component({
@@ -9,6 +9,9 @@ import { IHero } from '../mod/interfaces';
 export class MirrorComponent implements OnInit {
 
 @Input() hero?:IHero;
+@Output() close = new EventEmitter<IHero>();
+@Output() add = new EventEmitter<IHero>();
+
   
 constructor() { }
 
