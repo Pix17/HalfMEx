@@ -1,3 +1,4 @@
     <section *ngFor="let hero of items">
-      <app-card [card]="hero"></app-card>
+      <app-card [card]="hero" (show)="showItem.emit($event)"></app-card>
     </section>
+    

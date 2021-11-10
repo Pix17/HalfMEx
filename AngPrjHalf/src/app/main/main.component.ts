@@ -44,11 +44,17 @@ export class MainComponent implements OnInit {
     }
   ];
 
-
+  product?: IHero;
+  hide: boolean = true;
   
   constructor() { }
   
   ngOnInit(): void {
   }
   
+  showDetail(card:IHero){
+    this.product= card;
+    this.hide = false;    
+  }
+
 }

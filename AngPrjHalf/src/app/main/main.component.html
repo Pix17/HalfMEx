@@ -1,4 +1,4 @@
 <main class="d-flex">
-  <app-shop [items]="heroes"></app-shop>
-  <app-mirror></app-mirror>
+  <app-shop [items]="heroes" (showItem)="showDetail($event)"></app-shop>
+  <app-mirror [hero]="product"></app-mirror>
 </main>

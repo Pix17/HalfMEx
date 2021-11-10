@@ -1,5 +1,36 @@
-<section>
-    <h3>Benvenuti nello shop di</h3>
-    <img src="https://www.develhope.co/_nuxt/img/cav_black.9dc2b13.svg" alt="logo develhope">
-    <p>clicca sui dettagli del prodotto per visualizzare tutte le informazioni</p>
+<section *ngIf="hero; else def">
+   
+    <div class="card ms-4 my-5" style="width: 800px; height: 400px; border: 2px solid">
+       <div class="d-flex">
+           <div>
+               <img
+                 style="height: 130px"
+                 src="{{ hero.img }}"
+                 class="card-img-top mt-2"
+                 alt="img"
+               />
+           </div>
+           <div>
+               <h1>{{hero.title}}</h1>
+               <p>Anno di uscita: {{hero.exitYear}}</p>
+               <p>Altezza: {{hero.productHeight}}cm</p>
+               <p>Peso: {{hero.productWeight}}g</p>
+               <p>Pezi prodotti: {{hero.itemsProduced}}</p>
+           </div>
+       </div>
+        <div class="card-body">
+          <p class="card-title">{{ hero.description }}</p>
+          <h2 class="card-text">${{ hero.price }}</h2>
+        </div>
+    </div>
+
 </section>
+
+
+<ng-template #def>
+    <section>
+        <h3>Benvenuti nello shop di</h3>
+        <img src="https://www.develhope.co/_nuxt/img/cav_black.9dc2b13.svg" alt="logo develhope">
+        <p>clicca sui dettagli del prodotto per visualizzare tutte le informazioni</p>
+    </section>
+</ng-template>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IHero } from '../mod/interfaces';
 
 @Component({
   selector: 'app-mirror',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MirrorComponent implements OnInit {
 
-  constructor() { }
+@Input() hero?:IHero;
+  
+constructor() { }
 
   ngOnInit(): void {
   }

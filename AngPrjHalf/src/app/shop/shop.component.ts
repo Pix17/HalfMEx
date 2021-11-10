@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { IHero } from '../mod/interfaces';
 
 @Component({
@@ -9,7 +9,8 @@ import { IHero } from '../mod/interfaces';
 export class ShopComponent implements OnInit {
 
 @Input() items!:IHero[];
-  
+@Output() showItem = new EventEmitter<IHero>();
+
 constructor() { }
 
   ngOnInit(): void {
